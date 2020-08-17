@@ -1,1 +1,5 @@
-# neural_networks
+# Neural Networks
+
+The project's goal is to create a neural network that could achieve an accuracy higher than 75%. The data set was a list of charities. The features include: EIN, Name, Application Type, Affiliation, Classification, Use Case, Organization, Status, Income Amount, Special Consideration, and ask Amount. The model's target is 'Is Successful.' EIN and Name were removed because those features do not affect if the charity is successful or not. A unique count of each of the features showed application type, and classification required bucketing. The features and targets were encoded and split up for training. I did not achieve the goal using a four-layer neural network with 20, 16, 12, and 8 nodes, respectively, stepping down from the number of features. The final model used 200 epochs. Each hidden layer used the relu activation, and the output layer used a sigmoid activation.
+
+Interestingly, the bucketing reduced the accuracy, and I will need to verify if I was bucketing the data correctly. Increasing the number of epochs from 100 to 200 had little effect. If I could use a different model, it would be a random forest. It can achieve the same categorization as a neural network, but faster, allowing for any changes to have a minimal effect on run time.
